@@ -1,0 +1,26 @@
+services:
+  relay:
+    build: ./relay
+    ports:
+      - "443:443"
+    networks:
+      - internet
+
+  agent:
+    build: ./agent
+    depends_on:
+      - relay
+      - web
+    networks:
+      - internet
+      - home
+
+  web:
+    image: python:3.11-slim
+    command: python -m http.server 8080
+    networks:
+      - home
+
+networks:
+  internet:
+  home:
