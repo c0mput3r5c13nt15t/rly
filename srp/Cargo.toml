@@ -6,3 +6,4 @@ edition = "2024"
 [dependencies]
 tokio = { version = "1", features = ["full"] }
 shared = { path = "../shared" }
+log = "0.4.29"

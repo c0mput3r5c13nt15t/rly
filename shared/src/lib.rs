@@ -1,4 +1,5 @@
-pub mod parsing;
+pub mod config;
+pub mod logger;
 
 use serde::Deserialize;
 use clap::Parser;
