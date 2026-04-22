@@ -10,10 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Build srp
-      run: cargo build --release -p srp
-    - name: Build srps
-      run: cargo build --release -p srps
+    - name: Building
+      run: cargo build --release
     - name: Upload binaries
       uses: actions/upload-artifact@v4
       with:
